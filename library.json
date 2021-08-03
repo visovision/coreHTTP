@@ -1,0 +1,24 @@
+{
+    "name": "coreHTTP",
+    "version": "2.0.2",
+    "description": "Client implementation of a subset of HTTP 1.1 protocol designed for embedded devices.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/FreeRTOS/coreHTTP.git"
+    },
+    "license": "MIT",
+    "export": {
+        "include": ["source/include", "source/*.c"]
+    },
+    "dependencies": [
+        {
+            "name": "http-parser",
+            "version": "https://github.com/visovision/http-parser.git#34ddd9519a570c46382fb0cae394691bd97c445b"
+        }
+    ],
+    "build": {
+        "includeDir": "source/include",
+        "srcDir": "source",
+        "srcFilter": "+<*.c>"
+    }
+}
